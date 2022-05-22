@@ -1,4 +1,4 @@
-function slove(n,m){
+function solve(n,m){
     small = Math.min(n,m);
     for(let num = small;num>0;num--){
         if (m%num == 0 && n%num==0){
@@ -7,6 +7,6 @@ function slove(n,m){
         }
     }
 }
-slove(15,5)
-slove(500,1500)
-slove(2154,458)
+solve(15,5)
+solve(500,1500)
+solve(2154,458)
