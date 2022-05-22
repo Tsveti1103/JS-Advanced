@@ -1,4 +1,4 @@
-function slove(steps,footprint,speed) {
+function solve(steps,footprint,speed) {
     let distance = steps * footprint
     let breaks = Math.floor(distance/500)*60
     distance = distance
@@ -12,5 +12,5 @@ function slove(steps,footprint,speed) {
     hours = ((hours < 10) ? '0' : '') + hours
     console.log(`${hours}:${minutes}:${seconds}`)
 }
-slove(4000, 0.60, 5)
-slove(2564, 0.70, 5.5)
+solve(4000, 0.60, 5)
+solve(2564, 0.70, 5.5)
