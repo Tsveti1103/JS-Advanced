@@ -1,4 +1,4 @@
-function slove(num, ...params) {
+function solve(num, ...params) {
     num = Number(num);
     let chop = x => x / 2;
     let dice = x => Math.sqrt(x);
@@ -32,5 +32,5 @@ function slove(num, ...params) {
     }
 
 }
-slove('32', 'chop', 'chop', 'chop', 'chop', 'chop')
-slove('9', 'dice', 'spice', 'chop', 'bake', 'fillet')
+solve('32', 'chop', 'chop', 'chop', 'chop', 'chop')
+solve('9', 'dice', 'spice', 'chop', 'bake', 'fillet')
