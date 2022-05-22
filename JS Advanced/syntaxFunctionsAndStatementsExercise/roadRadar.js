@@ -1,4 +1,4 @@
-function slove(speed, area) {
+function solve(speed, area) {
     let limit
     switch (area) {
         case 'motorway':
@@ -37,7 +37,7 @@ function slove(speed, area) {
 
 
     }
-    slove(40, 'city');
-    slove(21, 'residential');
-    slove(120, 'interstate');
-    slove(200, 'motorway');
+    solve(40, 'city');
+    solve(21, 'residential');
+    solve(120, 'interstate');
+    solve(200, 'motorway');
