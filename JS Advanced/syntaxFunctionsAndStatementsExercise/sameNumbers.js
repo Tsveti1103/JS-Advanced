@@ -1,4 +1,4 @@
-function slove(num){
+function solve(num){
     let theSame = true;
     let sum =0;
     for(let i = 0; i < String(num).length; i++){
@@ -16,6 +16,6 @@ function slove(num){
    
 }
 
-slove(2222222);
-slove(1234);
-slove(5);
+solve(2222222);
+solve(1234);
+solve(5);
