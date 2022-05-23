@@ -8,6 +8,6 @@ function negativePositiveNumbers(arr){
             result.unshift(i)
         }
     }
-    console.log(result)
+    console.log(result.join('\n'))
 }
 negativePositiveNumbers([3, -2, 0, -1])
