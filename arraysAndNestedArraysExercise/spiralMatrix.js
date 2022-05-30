@@ -50,5 +50,5 @@ function spiral(row, col) {
     }
 }
 
-spiral(4,4)
-// spiral(5,5)
+spiral(5,5)
+
