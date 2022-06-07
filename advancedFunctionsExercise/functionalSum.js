@@ -1,9 +1,9 @@
-function add(n){
-    const inner = function(a){
-        n+=a;
+function add(n) {
+    const inner = function (a) {
+        n += a;
         return inner;
     };
-    inner.toString = function(){
+    inner.toString = function () {
         return n;
     }
     return inner;
