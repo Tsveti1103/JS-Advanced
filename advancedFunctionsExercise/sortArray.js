@@ -15,6 +15,7 @@
 //     arr.sort(metods[command]);
 //     return arr
 // }
+
 function sortArray(arr, command) {
     return arr.sort((a, b) => (command == 'asc'? a - b: b - a))
 }
