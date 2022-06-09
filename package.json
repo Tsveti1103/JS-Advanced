@@ -1,0 +1,26 @@
+{
+  "name": "js-advanced",
+  "version": "1.0.0",
+  "description": "alabala",
+  "main": "symmetry.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tsveti1103/JS-SoftUni.git"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "ts",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tsveti1103/JS-SoftUni/issues"
+  },
+  "homepage": "https://github.com/Tsveti1103/JS-SoftUni#readme",
+  "dependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0"
+  }
+}
