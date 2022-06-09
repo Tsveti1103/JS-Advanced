@@ -1,54 +1,47 @@
 function spiral(row, col) {
-    let matrix = []
-    let maxNum = row * col
-    let middle = Math.floor(row / 2)
+    let matrix = [];
+    let maxNum = row * col;
+    let num = 1;
+    let rowStart = 0;
+    let colStart = 0;
+    let rowEnd = row - 1;
+    let colEnd = col - 1;
+
     for (let i = 0; i < row; i++) {
-        matrix.push(Array(col).fill(0))
+        matrix.push(Array(col).fill(0));
     }
-    matrix[middle][middle] = maxNum
-    let cRow = middle
-    let cCol = middle
-    for (let i = 1; i < row; i++) {
-        for (let j = 1; j <= i; j++) {
-            if (i % 2 == 1) {
-                maxNum--;
-                cCol--
-                matrix[cRow][cCol] = maxNum
 
-            }
-            else {
-                maxNum--;
-                cCol++
-                matrix[cRow][cCol] = maxNum
-
-            }
-
+    while (num <= maxNum) {
+        // right
+        for (let c = colStart; c <= colEnd; c++) {
+            matrix[rowStart][c] = num;
+            num++;
         }
-        for (let k = 1; k <= i; k++) {
-            if (i % 2 == 1) {
-
-                maxNum--;
-                cRow++;
-                matrix[cRow][cCol] = maxNum
-            }
-            else {
-
-                maxNum--;
-                cRow--
-                matrix[cRow][cCol] = maxNum
-            }
-
+        rowStart++;
+        // down
+        for (let r = rowStart; r <= rowEnd; r++) {
+            matrix[r][colEnd] = num;
+            num++;
         }
-    }
-    for (let m = row - 2; m >= 0; m--) {
-        maxNum--;
-        cCol--
-        matrix[cRow][cCol] = maxNum
+        colEnd--;
+        // left
+        for (let c = colEnd; c >= colStart; c--) {
+            matrix[rowEnd][c] = num;
+            num++;
+        }
+        rowEnd--;
+        // up
+        for (let r = rowEnd; r >= rowStart; r--) {
+            matrix[r][colStart] = num;
+            num++;
+        }
+        colStart++;
     }
     for (let row = 0; row < matrix.length; row++) {
         console.log(matrix[row].join(' '))
     }
+
 }
 
-spiral(5,5)
+spiral(4, 4)
 
