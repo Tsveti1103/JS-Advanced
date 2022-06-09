@@ -7,6 +7,3 @@ function sum(arr) {
 }
 
 module.exports = {sum};
-
-
-console.log(sum(['a','b']))
