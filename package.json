@@ -1,19 +1,16 @@
 {
-  "name": "js-advanced",
+  "name": "js",
   "version": "1.0.0",
-  "description": "alabala",
-  "main": "symmetry.js",
+  "description": "a",
+  "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Tsveti1103/JS-SoftUni.git"
   },
-  "keywords": [
-    "test"
-  ],
-  "author": "ts",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Tsveti1103/JS-SoftUni/issues"
