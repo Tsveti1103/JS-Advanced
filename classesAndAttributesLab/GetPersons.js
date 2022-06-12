@@ -1,4 +1,4 @@
-function getPerson(){
+function getPerson() {
     let result = []
     class Person {
         constructor(firstName, lastName, age, email) {
@@ -17,10 +17,10 @@ function getPerson(){
     // let preson4 = new Person('Gabriel','Peterson',24,'g.p@gmail.com');
     // result.push(preson1,preson2,preson3,preson4);
     // return result;
-    result.push(new Person('Anna','Simpson',22,'anna@yahoo.com'));
+    result.push(new Person('Anna', 'Simpson', 22, 'anna@yahoo.com'));
     result.push(new Person('SoftUni'));
-    result.push(new Person('Stephan','Johnson',25));
-    result.push(new Person('Gabriel','Peterson',24,'g.p@gmail.com'));
+    result.push(new Person('Stephan', 'Johnson', 25));
+    result.push(new Person('Gabriel', 'Peterson', 24, 'g.p@gmail.com'));
     return result;
 }
 console.log(getPerson())
