@@ -22,6 +22,7 @@ describe("Tests for numberOperations", function () {
         it("Error case", function () {
             expect(() => numberOperations.numberChecker('str')).throw('The input is not a number!');
             expect(() => numberOperations.numberChecker({ '5': 5 })).throw('The input is not a number!');
+            expect(() => numberOperations.numberChecker()).throw('The input is not a number!');
         });
     });
 
