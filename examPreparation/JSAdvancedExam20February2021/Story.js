@@ -18,11 +18,10 @@ class Story {
     }
 
     like(username) {
-        if (username in this._likes) {
-            return "You can't like the same story twice!"
-        }
-        else if (username == this.creator) {
-            return "You can't like your own story!"
+        if (this._likes.includes(username)) {
+            throw new Error(`You can't like the same story twice!`);
+        } else if (username == this.creator) {
+            throw new Error(`You can't like your own story!`);
         }
         this._likes.push(username)
         return `${username} liked ${this.title}!`
