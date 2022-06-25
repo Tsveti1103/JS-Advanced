@@ -1,6 +1,6 @@
 class Bank {
     constructor(bankName) {
-        this.bankName = bankName;
+        this._bankName = bankName;
         this.allCustomers = [];
     }
     newCustomer(customer) {
@@ -26,7 +26,8 @@ class Bank {
             customerFound.transactions = [];
         }
         customerFound.totalMoney += amount
-        customerFound.transactions.push(`${customerFound.firstName} ${customerFound.lastName} made deposit of ${amount}$!`);
+        let num = customerFound.transactions.length
+        customerFound.transactions.unshift(`${num + 1}. ${customerFound.firstName} ${customerFound.lastName} made deposit of ${amount}$!`)
         return `${customerFound.totalMoney}$`
 
     }
@@ -42,7 +43,8 @@ class Bank {
             throw new Error(`${customerFound.firstName} ${customerFound.lastName} does not have enough money to withdraw that amount!`)
         }
         customerFound.totalMoney -= amount;
-        customerFound.transactions.push(`${customerFound.firstName} ${customerFound.lastName} made deposit of ${amount}$!`);
+        let num = customerFound.transactions.length
+        customerFound.transactions.unshift(`${num + 1}. ${customerFound.firstName} ${customerFound.lastName} withdrew ${amount}$!`);
         return `${customerFound.totalMoney}$`
     }
     customerInfo(personalId) {
@@ -50,18 +52,17 @@ class Bank {
         if (!customerFound) {
             throw new Error(`We have no customer with this ID!`)
         }
-        let result = [];
-        result.push(`Bank name: ${this.bankName}`);
-        result.push(`Customer name: ${customerFound.firstName} ${customerFound.lastName}`);
-        result.push(`Customer ID: ${customerFound.personalId}`);
-        result.push(`Total Money: ${customerFound.totalMoney}$`);
-        result.push('Transactions:');
-
-        for (let i = customerFound.transactions.length - 1; i >= 0; i--) {
-            result.push(`${i + 1}. ${customerFound.transactions[i]}`);
+        let result = [
+            `Bank name: ${this._bankName}`,
+            `Customer name: ${customerFound.firstName} ${customerFound.lastName}`,
+            `Customer ID: ${customerFound.personalId}`,
+            `Total Money: ${customerFound.totalMoney}$`,
+            `Transactions:`
+        ]
+        if (customerFound.transactions) {
+            result.push(`${customerFound.transactions.join('\n')}`)
         }
-
-        return result.join('\n');
+        return result.join('\n')
     }
 
 
